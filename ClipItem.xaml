@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="MyClipBoardList.ClipItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyClipBoardList"
+             mc:Ignorable="d" 
+             Width="300" Height="Auto">
+    <StackPanel>
+        <TextBlock Name="cItem" Grid.Row="0" Text="aaa" Padding="5" Cursor="Hand" MouseDown="Item_MouseDown"  />
+        <TextBlock Name="cSeparator" Grid.Row="1" Background="Silver" Height="1" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="MyClipBoardList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyClipBoardList"
+        mc:Ignorable="d"
+        Title="Test List" Width="150" WindowStyle="ToolWindow" KeyDown="Window_KeyDown" ResizeMode="NoResize" SizeToContent="Height">
+    <StackPanel>
+        <local:ClipItem Index="0" x:Name="cItem00"/>
+        <local:ClipItem Index="1" x:Name="cItem01"/>
+        <local:ClipItem Index="2" x:Name="cItem02"/>
+        <local:ClipItem Index="3" x:Name="cItem03"/>
+        <local:ClipItem Index="4" x:Name="cItem04"/>
+        <local:ClipItem Index="5" x:Name="cItem05"/>
+        <local:ClipItem Index="6" x:Name="cItem06"/>
+        <local:ClipItem Index="7" x:Name="cItem07"/>
+        <local:ClipItem Index="8" x:Name="cItem08"/>
+        <local:ClipItem Index="9" x:Name="cItem09"/>
+    </StackPanel>
+</Window>
