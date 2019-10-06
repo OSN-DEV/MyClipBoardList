@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AppData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Items>
-    <string>this._currentIndex</string>
-    <string />
-    <string />
-    <string />
+    <string>&lt;pre&gt;&lt;code&gt;</string>
+    <string>&lt;/code&gt;&lt;/pre&gt;</string>
+    <string>&lt;div class="figure"&gt;xxx&lt;/div&gt;</string>
+    <string>&lt;span class="bold"&gt;</string>
     <string />
     <string />
     <string />

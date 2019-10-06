@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyClipBoardList"
         mc:Ignorable="d"
-        Title="Test List" Width="150" WindowStyle="ToolWindow" KeyDown="Window_KeyDown" ResizeMode="NoResize" SizeToContent="Height">
+        Title="Text List" Width="150" WindowStyle="ToolWindow" KeyDown="Window_KeyDown" ResizeMode="NoResize" SizeToContent="Height">
     <StackPanel>
         <local:ClipItem Index="0" x:Name="cItem00"/>
         <local:ClipItem Index="1" x:Name="cItem01"/>
