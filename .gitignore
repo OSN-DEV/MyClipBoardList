@@ -289,3 +289,6 @@ __pycache__/
 
 # User
 doc/
+/.vs
+/bin
+/obj
