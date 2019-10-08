@@ -62,6 +62,10 @@ namespace MyClipBoardList {
         /// <param name="e"></param>
         private void Item_MouseDown(object sender, MouseButtonEventArgs e) {
             if (1 == e.ClickCount) {
+                if ((Keyboard.Modifiers & ModifierKeys.Control) != ModifierKeys.None) {
+                    Clipboard.SetText(this.cItem.Text, TextDataFormat.Text);
+                }
+
                 if (!this.IsSelected) {
                     this.IsSelected = true;
                     if (null != this.ClipItemSelected) {

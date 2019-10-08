@@ -80,6 +80,7 @@ namespace MyClipBoardList {
                     continue;
                 }
                 this._clipItems[i].IsSelected = false;
+
             }
         }
 
