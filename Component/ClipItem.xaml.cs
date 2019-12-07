@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyClipBoardList.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyClipBoardList {
+namespace MyClipBoardList.Component {
     /// <summary>
     /// ClipItem.xaml の相互作用ロジック
     /// </summary>
@@ -64,11 +65,7 @@ namespace MyClipBoardList {
             if (1 == e.ClickCount) {
                 if ((Keyboard.Modifiers & ModifierKeys.Control) != ModifierKeys.None) {
                     var item = this.cItem.Text;
-                    if (0 < this.cItem.Text.IndexOf("<0>")) {
-                        var currentItem = Clipboard.GetText(TextDataFormat.Text);
-                        item = item.Replace("<0>", currentItem);
-                    }
-                    Clipboard.SetText(item, TextDataFormat.Text);
+                    AppUtil.SetClipBoard(this.cItem.Text);
                 }
 
                 if (!this.IsSelected) {

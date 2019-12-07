@@ -3,19 +3,46 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MyClipBoardList"
+        xmlns:local="clr-namespace:MyClipBoardList.Component"
         mc:Ignorable="d"
-        Title="My Clip Board" Width="300" KeyDown="Window_KeyDown" ResizeMode="NoResize" SizeToContent="Height">
-    <StackPanel>
-        <local:ClipItem Index="0" x:Name="cItem00"/>
-        <local:ClipItem Index="1" x:Name="cItem01"/>
-        <local:ClipItem Index="2" x:Name="cItem02"/>
-        <local:ClipItem Index="3" x:Name="cItem03"/>
-        <local:ClipItem Index="4" x:Name="cItem04"/>
-        <local:ClipItem Index="5" x:Name="cItem05"/>
-        <local:ClipItem Index="6" x:Name="cItem06"/>
-        <local:ClipItem Index="7" x:Name="cItem07"/>
-        <local:ClipItem Index="8" x:Name="cItem08"/>
-        <local:ClipItem Index="9" x:Name="cItem09"/>
-    </StackPanel>
+        Title="My Clip Board" Width="300" Height="300" KeyDown="Window_KeyDown" ResizeMode="NoResize" WindowStyle="ThreeDBorderWindow" SizeToContent="WidthAndHeight" Closed="Window_Closed">
+    <Window.Resources>
+        <!--<Style x:Key="NumLabel" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="Width" Value="20" />
+        </Style>-->
+    </Window.Resources>
+    <Grid Name="cContainer" Margin="0,0,0,10"> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <local:TabPage x:Name="cTab" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Height="5" Background="#52BE80" />
+
+        <!--<TextBlock Grid.Row="2" Grid.Column="0" Text="1" Style="{StaticResource NumLabel}"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="2" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="3" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="4" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="5" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="6" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="7" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="8" Style="{StaticResource NumLabel}" />
+        <TextBlock Grid.Row="10" Grid.Column="0" Text="9" Style="{StaticResource NumLabel}" />
+        
+        <local:ClipItem Grid.Row="2" Grid.Column="1" Index="0" x:Name="cItem00"/>
+        <local:ClipItem Grid.Row="3" Grid.Column="1" Index="1" x:Name="cItem01"/>
+        <local:ClipItem Grid.Row="4" Grid.Column="1" Index="2" x:Name="cItem02"/>
+        <local:ClipItem Grid.Row="5" Grid.Column="1" Index="3" x:Name="cItem03"/>
+        <local:ClipItem Grid.Row="6" Grid.Column="1" Index="4" x:Name="cItem04"/>
+        <local:ClipItem Grid.Row="7" Grid.Column="1" Index="5" x:Name="cItem05"/>
+        <local:ClipItem Grid.Row="8" Grid.Column="1" Index="6" x:Name="cItem06"/>
+        <local:ClipItem Grid.Row="9" Grid.Column="1" Index="7" x:Name="cItem07"/>
+        <local:ClipItem Grid.Row="10" Grid.Column="1" Index="8" x:Name="cItem08"/>-->
+    </Grid>
 </Window>
