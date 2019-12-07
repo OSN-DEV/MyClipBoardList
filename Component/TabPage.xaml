@@ -18,6 +18,6 @@
             </Style>
         </ResourceDictionary>
     </UserControl.Resources>
-    <StackPanel Orientation="Horizontal" Name="cContainer" />
+    <StackPanel Orientation="Horizontal" Name="cContainer" HorizontalAlignment="Center" />
 
 </UserControl>
