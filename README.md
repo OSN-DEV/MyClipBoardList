@@ -24,7 +24,7 @@
 ## Esc
 アプリケーションの最小化
 
-## Ctrl + Shift + Alt + C
+## Ctrl + Shift + Alt + P
 アプリケーションの表示(ホットキー)
 
 

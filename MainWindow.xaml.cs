@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using MyClipBoardList.Component;
+using MyClipBoardList.Data;
+using MyClipBoardList.Util;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MyClipBoardList.Component;
-using MyClipBoardList.Util;
-using MyClipBoardList.Data;
 
 namespace MyClipBoardList {
     /// <summary>
@@ -232,7 +222,7 @@ namespace MyClipBoardList {
             this.Title = $"MyClipBoard({info.FileVersion})";
 
             // register hot key
-            this._hotkey.Register(ModifierKeys.Control | ModifierKeys.Shift | ModifierKeys.Alt, Key.C, (_, __) => {
+            this._hotkey.Register(ModifierKeys.Control | ModifierKeys.Shift | ModifierKeys.Alt, Key.P, (_, __) => {
                 if (!this.ShowInTaskbar) {
                     this.SetWindowsState(false);
                 } else {
