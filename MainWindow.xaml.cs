@@ -56,6 +56,10 @@ namespace MyClipBoardList {
             if (Key.D1 <= e.Key && e.Key <= Key.D9) {
                 e.Handled = true;
                 this._inputNum = e.Key - Key.D1;
+                if (this.IsModifierPressed(ModifierKeys.Shift)) {
+                    AppUtil.SetClipBoard(this._clipItems[this._inputNum].Text);
+                    this._inputNum = -1;
+                }
                 return;
             }
 
