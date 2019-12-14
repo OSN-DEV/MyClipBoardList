@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyClipBoardList.Component"
         mc:Ignorable="d"
-        Title="My Clip Board" Width="300" Height="300" KeyDown="Window_KeyDown" ResizeMode="NoResize" WindowStyle="ThreeDBorderWindow" SizeToContent="WidthAndHeight" Closed="Window_Closed">
+        Title="My Clip Board" Width="300" Height="300" KeyDown="Window_KeyDown" ResizeMode="NoResize" WindowStyle="ThreeDBorderWindow" SizeToContent="WidthAndHeight" Closing="Window_Closed">
     <Window.Resources>
         <!--<Style x:Key="NumLabel" TargetType="TextBlock">
             <Setter Property="VerticalAlignment" Value="Center" />
