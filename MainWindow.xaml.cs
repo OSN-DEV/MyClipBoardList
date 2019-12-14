@@ -41,9 +41,9 @@ namespace MyClipBoardList {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e) {
-            this._settings.Pos.X = this.Left;
-            this._settings.Pos.Y = this.Top;
-            this._settings.Save();
+            //this._settings.Pos.X = this.Left;
+            //this._settings.Pos.Y = this.Top;
+            //this._settings.Save();
             this._hotkey.Dispose();
         }
 
