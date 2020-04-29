@@ -76,7 +76,7 @@ namespace MyClipBoardList.Component {
                     }
                 }
             } else {
-                Clipboard.SetText(this.cItem.Text, TextDataFormat.Text);
+                Clipboard.SetText(this.cItem.Text, TextDataFormat.UnicodeText);
             }
         }
         #endregion

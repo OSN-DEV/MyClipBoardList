@@ -13,8 +13,8 @@ namespace MyClipBoardList.Util {
         /// </summary>
         /// <param name="baseText"></param>
         public static void SetClipBoard(string baseText) {
-            var text = String.Format(baseText, Clipboard.GetText(TextDataFormat.Text));
-            Clipboard.SetText(text, TextDataFormat.Text);
+            var text = String.Format(baseText, Clipboard.GetText(TextDataFormat.UnicodeText));
+            Clipboard.SetText(text, TextDataFormat.UnicodeText);
         }
     }
 }
