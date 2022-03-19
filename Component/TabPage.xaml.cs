@@ -5,7 +5,7 @@ using System.Windows.Controls;
 
 namespace MyClipBoardList.Component {
     /// <summary>
-    /// TabPage.xaml の相互作用ロジック
+    /// カスタムタブ
     /// </summary>
     public partial class TabPage : UserControl {
 
@@ -19,6 +19,14 @@ namespace MyClipBoardList.Component {
         internal delegate void TabPageEventHandler(TabSelectEventArgs args);
         internal event TabPageEventHandler TabSelected;
         private Button _selectedItem = null;
+        #endregion
+
+        #region Public Property
+        public int CurrentTabIndex {
+            get {
+                return Int32.Parse(this._selectedItem.Content.ToString())-1;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -44,7 +52,6 @@ namespace MyClipBoardList.Component {
             this.TabSelected?.Invoke(new TabSelectEventArgs(index - 1));
         }
         #endregion
-
 
         #region Public Method
         /// <summary>

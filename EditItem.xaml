@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
 
         <u:CustomTextBox x:Name="cItem" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ImeMode="Off" 
-                         TextChanged="Item_TextChanged" TextWrapping="Wrap" Margin="3,10,3,4" />
+                         TextChanged="Item_TextChanged" TextWrapping="Wrap" Margin="3,10,3,4" AcceptsReturn="True" />
 
         <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>

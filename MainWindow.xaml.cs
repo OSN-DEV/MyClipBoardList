@@ -9,9 +9,10 @@ using System.Windows.Input;
 
 namespace MyClipBoardList {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// メイン
     /// </summary>
     public partial class MainWindow : Window {
+
         #region Declaration
         private List<ClipItem> _clipItems = new List<ClipItem>();
         private ClipItem _selectedClipItem = null;
@@ -53,6 +54,7 @@ namespace MyClipBoardList {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Window_KeyDown(object sender, KeyEventArgs e) {
+            // Shift + 1～9でクリップボードにコピー
             if (Key.D1 <= e.Key && e.Key <= Key.D9) {
                 e.Handled = true;
                 this._inputNum = e.Key - Key.D1;
@@ -64,6 +66,7 @@ namespace MyClipBoardList {
             }
 
             switch (e.Key) {
+                // T: 最前面表示の切り替え
                 case Key.T:
                     this.Topmost = !this.Topmost;
                     if (this.Topmost) {
@@ -72,7 +75,11 @@ namespace MyClipBoardList {
                         this.Title = this.Title.Replace(TopMostTitle, "");
                     }
                     break;
-
+                // 矢印でタブ移動
+                case Key.Left:
+                case Key.Right:
+                    this.ChangeTab(e.Key == Key.Left);
+                    break;
                 case Key.Escape:
                     this.SetWindowsState(true);
                     break;
@@ -301,6 +308,22 @@ namespace MyClipBoardList {
             } else {
                 this.Activate();
             }
+        }
+
+        /// <summary>
+        /// change current tab
+        /// </summary>
+        /// <param name="prev"></param>
+        private void ChangeTab(bool prev) {
+            var index = this.cTab.CurrentTabIndex;
+            index = index + (prev ? -1 : 1);
+            if (index < 0) {
+                index = Constant.TabCount-1;
+            } else if (Constant.TabCount <= index) {
+                index = 0;
+            }
+            this.cTab.SelectTab(index);
+            this.Tab_TabSelected(new TabPage.TabSelectEventArgs(index));
         }
         #endregion
 
