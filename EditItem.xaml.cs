@@ -59,6 +59,17 @@ namespace MyClipBoardList {
         private void Item_TextChanged(object sender, TextChangedEventArgs e) {
             this.cOK.IsEnabled = (0 < this.cItem.Text.Length);
         }
+
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e) {
+            System.Diagnostics.Debug.WriteLine(e.Key);
+            if (e.Key == Key.Enter) {
+                if ((Keyboard.Modifiers & ModifierKeys.Shift) != ModifierKeys.None) {
+                    e.Handled = true;
+                    this.Ok_Click(null, null);
+                }
+            }
+        }
         #endregion
 
         #region Private Method
@@ -74,5 +85,6 @@ namespace MyClipBoardList {
             };
         }
         #endregion
+
     }
 }

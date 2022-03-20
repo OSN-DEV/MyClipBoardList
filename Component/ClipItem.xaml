@@ -5,9 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyClipBoardList.Component"
              mc:Ignorable="d" 
-             Width="300" Height="Auto">
+             Width="300" Height="Auto" MaxHeight="100">
     <StackPanel>
-        <TextBlock Name="cItem" Grid.Row="0" Text="aaa" Padding="5" Cursor="Hand" MouseDown="Item_MouseDown" FontSize="14"  />
+        <TextBlock Name="cItem" Grid.Row="0" Text="aaa" Padding="5" 
+                   Cursor="Hand" MouseDown="Item_MouseDown" FontSize="14" 
+                   TextWrapping="Wrap"
+                   MaxHeight="80" TextTrimming="WordEllipsis" LineStackingStrategy="BlockLineHeight" 
+/>
         <TextBlock Name="cSeparator" Grid.Row="1" Background="Silver" Height="1" />
     </StackPanel>
 </UserControl>

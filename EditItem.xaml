@@ -6,7 +6,7 @@
         xmlns:u ="clr-namespace:MyClipBoardList.Component"
         xmlns:local="clr-namespace:MyClipBoardList"
         mc:Ignorable="d"
-        Title="アイテム編集" Height="250" Width="250" WindowStyle="ThreeDBorderWindow"  SizeToContent="Height" WindowStartupLocation="CenterOwner"  ShowInTaskbar="False" ResizeMode="NoResize">
+        Title="アイテム編集" Height="250" Width="250" WindowStyle="ThreeDBorderWindow"  SizeToContent="Height" WindowStartupLocation="CenterOwner"  ShowInTaskbar="False" ResizeMode="NoResize" PreviewKeyDown="Window_PreviewKeyDown">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
